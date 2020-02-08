@@ -61,22 +61,48 @@ var upperCaseCharacters = [
   "Z"
 ];
 
-// Prompt user for password length
-var length = prompt("Please choose password length. From 8 to 128 characerts.");
+//Collect user input
+function setPasswordOptions() {
+  // Prompt user for password length
+  var length = parseInt(
+    prompt("How many characters would you like your password to contain?")
+  );
 
-// Confirm inclusion of character types
-var hasNumericCharacters = confirm(
-  "Click OK to confirm including numeric characters."
-);
-var hasSpecialCharacters = confirm(
-  "Click OK to confirm including special characters."
-);
-var hasLowerCasedCharacters = confirm(
-  "Click OK to confirm including lowercase characters."
-);
-var hasUpperCasedCharacters = confirm(
-  "Click OK to confirm including uppercase characters."
-);
+  // Confirm use of character types
+  var useNumericCharacters = confirm("Click OK to use numeric characters.");
+  var useSpecialCharacters = confirm("Click OK to use special characters.");
+  var useLowerCasedCharacters = confirm(
+    "Click OK to use lowercase characters."
+  );
+  var useUpperCasedCharacters = confirm(
+    "Click OK to use uppercase characters."
+  );
+
+  //Conditional statement to confirm that password includes at least one type of character
+  if (
+    useSpecialCharacters === false &&
+    useNumericCharacters === false &&
+    useLowerCasedCharacters === false &&
+    useUpperCasedCharacters === false
+  ) {
+    alert("Password must use at least one character type");
+    return;
+  }
+
+  function name() {
+    var input = document.getElementById("userInput");
+    alert(input);
+  }
+  // var passwordOptions = {
+  //   length: length,
+  //   useSpecialCharacters: useSpecialCharacters,
+  //   useNumericCharacters: useNumericCharacters,
+  //   useLowerCasedCharacters: useLowerCasedCharacters,
+  //   useUpperCasedCharacters: useUpperCasedCharacters
+  };
+
+  return passwordOptions;
+}
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");

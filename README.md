@@ -39,8 +39,10 @@ THEN the password is either displayed in an alert or written to the page
 
 ### Process
 1)  Pseudocode 
-
 2)  Define variables
+3)  Add Prompt and confirms
+4)  Store user input
+4)  Use variables in functions
 
 
 ### Known Issues
