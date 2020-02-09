@@ -81,20 +81,26 @@ function setPasswordOptions() {
   // Store user input
   var passwordOptions = {
     length: length,
-    hasSpecialCharacters: hasSpecialCharacters,
-    hasNumericCharacters: hasNumericCharacters,
-    hasLowerCasedCharacters: hasLowerCasedCharacters,
-    hasUpperCasedCharacters: hasUpperCasedCharacters
+    useSpecialCharacters: useSpecialCharacters,
+    useNumericCharacters: useNumericCharacters,
+    useLowerCasedCharacters: useLowerCasedCharacters,
+    useUpperCasedCharacters: useUpperCasedCharacters
   };
   return passwordOptions;
 }
 
-//Function to generate password
+//Function to generate random password
 function random(passwordOptions) {
   return passwordOptions[Math.floor(Math.random() * passwordOptions.length)];
 }
 
-console.log(random(((passwordOptions = length), any)));
+// console.log(random(((passwordOptions = length), any)));
+
+function generatePassword() {
+  var options = getPasswordOptions();
+  // Variable to store password as it's being concatenated
+  var result = [];
+}
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");

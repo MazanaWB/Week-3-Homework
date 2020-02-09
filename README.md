@@ -5,9 +5,10 @@
 Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
 
 ## Goals
-*   Functional, depolyed application
-*   Build a habit of frequent commits to Github with meaningful commit messages
-*   Practice Javascript
+
+- Functional, depolyed application
+- Build a habit of frequent commits to Github with meaningful commit messages
+- Practice Javascript
 
 ## User Story
 
@@ -38,15 +39,18 @@ THEN the password is either displayed in an alert or written to the page
 ```
 
 ### Process
-1)  Pseudocode 
-2)  Define variables
-3)  Add Prompt and confirms
-4)  Store user input
-4)  Use variables in functions
 
+1.  Pseudocode
+2.  Define variables
+3.  Add prompt and confirms
+4.  Store user input
+5.  Generate password function
 
 ### Known Issues
-*  
+
+- Does not generate password
 
 ### Progress notes
-*   
+
+- Promt and confirms work
+- Added generatePassword Function
