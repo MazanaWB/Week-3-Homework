@@ -77,7 +77,24 @@ function setPasswordOptions() {
   var useUpperCasedCharacters = confirm(
     "Click OK to use uppercase characters."
   );
+
+  // Store user input
+  var passwordOptions = {
+    length: length,
+    hasSpecialCharacters: hasSpecialCharacters,
+    hasNumericCharacters: hasNumericCharacters,
+    hasLowerCasedCharacters: hasLowerCasedCharacters,
+    hasUpperCasedCharacters: hasUpperCasedCharacters
+  };
+  return passwordOptions;
 }
+
+//Function to generate password
+function random(passwordOptions) {
+  return passwordOptions[Math.floor(Math.random() * passwordOptions.length)];
+}
+
+console.log(random(((passwordOptions = length), any)));
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
