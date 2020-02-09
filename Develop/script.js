@@ -65,7 +65,7 @@ var upperCaseCharacters = [
 function setPasswordOptions() {
   // Prompt user for password length
   var length = parseInt(
-    prompt("How many characters would you like your password to contain?")
+    prompt("How many characters would you like in your password?")
   );
 
   // Confirm use of character types
@@ -77,31 +77,6 @@ function setPasswordOptions() {
   var useUpperCasedCharacters = confirm(
     "Click OK to use uppercase characters."
   );
-
-  //Conditional statement to confirm that password includes at least one type of character
-  if (
-    useSpecialCharacters === false &&
-    useNumericCharacters === false &&
-    useLowerCasedCharacters === false &&
-    useUpperCasedCharacters === false
-  ) {
-    alert("Password must use at least one character type");
-    return;
-  }
-
-  function name() {
-    var input = document.getElementById("userInput");
-    alert(input);
-  }
-  // var passwordOptions = {
-  //   length: length,
-  //   useSpecialCharacters: useSpecialCharacters,
-  //   useNumericCharacters: useNumericCharacters,
-  //   useLowerCasedCharacters: useLowerCasedCharacters,
-  //   useUpperCasedCharacters: useUpperCasedCharacters
-  };
-
-  return passwordOptions;
 }
 
 // Assignment Code
@@ -116,4 +91,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", setPasswordOptions, writePassword);
