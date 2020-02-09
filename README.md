@@ -49,6 +49,9 @@ THEN the password is either displayed in an alert or written to the page
 ### Known Issues
 
 - Does not generate password
+- Can't figure out how to pass into writePassword
+- some vars not defined/used
+- some vars already defined
 
 ### Progress notes
 

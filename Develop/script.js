@@ -89,17 +89,33 @@ function setPasswordOptions() {
   return passwordOptions;
 }
 
-//Function to generate random password
-function random(passwordOptions) {
-  return passwordOptions[Math.floor(Math.random() * passwordOptions.length)];
-}
+//Function to generate random password from array of user input
+function random() {
+  var userElements = Math.floor(Math.random() * passwordOptions.length);
 
-// console.log(random(((passwordOptions = length), any)));
+  return userElements;
+}
+//console.log(random);
 
 function generatePassword() {
   var options = getPasswordOptions();
   // Variable to store password as it's being concatenated
   var result = [];
+
+  // Array to store types of characters to include in password
+  var passwordOptions = [];
+
+  // For loop using possible characters
+  for (var i = 0; i < passswordOptions.length; i++) {
+    var passwordOptions = random(passwordOptions);
+
+    result.push(passwordOptions);
+    result[i] = passwordOptions[i];
+  }
+
+  // Make into a string and pass into writePassword
+  return result.join("");
+  //var passwordText = document.getElementById("#password").value;
 }
 
 // Assignment Code
